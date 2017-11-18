@@ -1,0 +1,52 @@
+.letter {
+	 font-size: 45px;
+	display: inline-block;
+	margin: 5px;
+	color:lightgray;
+	text-align: center;
+	width: 50px;
+	padding: 5px;
+	background: url(../images/1.jpg);
+	height: 200px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+}
+
+
+.top {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#.panel-body div   {
+
+margin: 0 auto;
+width: 30% ;
+
+}
+
+#word {
+	margin: 0 auto;
+	
+	display: inline;
+	
+
+}
+
+
+#hidden {
+	visibility: ;
+	margin-top: -12px;
+}
+
+
+ #header_img {
+	background-image: cover;
+	
+	height:175px;
+	
+	
+ }
+
+
