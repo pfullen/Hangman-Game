@@ -12,6 +12,7 @@ var word = words[Math.floor(Math.random() * words.length)];
 
 
 
+
 // The code below converst the word which is a sting into an array of each of its chars	
 word = word.split("");
 
@@ -20,28 +21,49 @@ console.log(word);
 
 
 $.each(word, function(index, value) {
-	$('#word').append("<div class='letter'>   <div id='hidden'> " + value + "</div> </div>" );            //           
+	$('#word').append("<div class='letter'> <div id='letter-" + index + "'> " + value + " </div></div>" );
+	$('[id^=letter').css("visibility", "hidden");            //           
+	console.log($(".letter-").data("value"));
  });
 
-});
+
+
+
+$('#letter-'+ 2).css("visibility", "visible");
+$('#letter-' +2).parent().css("background", "none");
+
+
 
 // $.each(function(word, index) {
 //	console.log (index + " ");
 //});
 
+//var letterSelect = ('.letter').find('[data-value="a"]').hide();
 
 
+//$('[data-letter="o"]').css("color:","red");   
 
 
-//document.onkeyup = function(event) {
+    document.onkeyup = function(event) {
 
-//	var userChoice = event.key;
+	 var userChoice = event.key;
 
   //  var index = word.indexOf(userChoice);
-	//console.log(index);
+	console.log(event.key);
+
+
+for (i=0; i< word.length ; i++) {
+	console.log(' This is the letter ' + word[i] + "This is the user choice:" + userChoice);
+	if (userChoice === word[i]) {
+		console.log("I just found the letter.  It is located at index" + i );
+	}
+};
 
 	
+  };    // end of document key up function 
+	
 
+});  // end of file  document ready
 //	if (userChoice.indexOf(word) === -1) {
 //		document.write ("You need to focus young Jedi.  Your guess was not correct");
 //		chancesRemaining --;
