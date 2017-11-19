@@ -9,7 +9,7 @@ body {
 	background-repeat: no-repeat;
 	background-color: black;	
 	font-family: "Century Gothic", Arial, Times;
-	
+	width:100%;
 }
 
 
@@ -70,11 +70,10 @@ width: 30% ;
 
  #header_img {
 	background-image: cover;
-	
 	height:175px;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	
+	display: none;	
 	
  }
 
@@ -111,9 +110,11 @@ h3 {
 
 	background-color: black;
 	color: white;
-	margin-top: 10px;
-	height: 280px;
+	margin-top: 40px;
+	height: auto;	;
 	margin-bottom: 0;
+	width: 100%;
+
 }
 
 .container-fluid {
@@ -139,4 +140,45 @@ h3 {
 
 #gameStatus {
 	text-align: center;
+}
+
+#game-counters {
+	margin: 10px;
+	border: 10px solid darkred;
+	width: 15%;
+	display: inline-grid;
+	background-color: black;
+	float: left;
+	color: white;
+	display: none;
+
+
+}
+
+#guesses {
+	display: inline;
+	border: 5px solid darkred;
+}
+
+div #guesses-remaining {
+	
+	color: yellow: ;
+	margin: 0;
+	padding-left: 5px;
+}
+
+
+#start {
+	display: none; 
+}
+
+iframe {
+	margin: 0 auto;
+	
+    margin-right: 50px;
+}
+
+
+#instructions {
+	display: none;
 }
