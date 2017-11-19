@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Hangman-Game</title>
+	<title>Starwars Hangman-Game</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css integrity=sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u crossorigin=anonymous>
@@ -13,57 +13,106 @@
 <body>
 
 	
-	<div class="container-fluid">
-	<div class="row">
+	<div class="container-fluid ">
+	<div class="row >
 		<div class="col-md-12">
-			<div class="row">
+			<div class="rows">	
 				<div class = "container-fluid top">
-				<h1>  Welcome to Hangman  </h1>
-				<button type="button" class="btn btn-primary"> click to begin  </button>
-				<p>  For instuctions type *   </p>
-
 				
+
+				<h1>  In A Galaxy Far Far Away......  </h1>
+				<div id="game-counters">
+					    <div id="guesses">
+					    	Guesses
+							
+					    	Remaining:
+					    	<div id="guesses-remaining">  
+							</div>
+					    </div>
+
+						
+						
+						<div id="correctGuesses">
+						</div>
+					</div>
+				<!--  <p>  For instuctions type *   </p>  -->
+				
+
+				<br>
+				<br>
 				<div class="col-md-12">
 					<img id="header_img" `alt="Bootstrap Image Preview" src="assets/images/Star_Wars.png" />
+					<div id="intro">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/tGsKzZtRwxw" frameborder="0" allowfullscreen></iframe>
+
+				
+
+					</div>
 				</div>
 				
+				
+				
+
 			</div> 
-			<button type="button" class="btn btn-default">
-				Default
-			</button> 
-			<button type="button" class="btn btn-default">
-				Default
-			</button> 
-			<button type="button" class="btn btn-default">
-				Default
-			</button>
+			
 			<div class="panel panel-default">
-				<div class="panel-heading">
+				
+				
+					<div id="button-area">
+					<button type="button" class="btn btn-primary" id="next"> Continue   </button>
+					<button type="button" class="btn btn-primary" id="start"> Click to play  </button>
+
+					</div>
+					<div id="gameStatus">
+				</div>
+				<div>
+					
+
+                
+					
+ 
+				
+
+
+
+
+
+				<div id="instructions">
 					<h3 class="panel-title">
-						Panel title
+						 Use the Force, Luke!!!  
+						 <br>
+						 <br>
+	 					 Guess the correct letter and solve the hidden word.  
+						 <br>
+ 						 Just press a letter on your keyboard.
 					</h3>
 				</div>
-				<div class="panel-body" >
-					<div class="row">
+
+
+
+				</div>
+				<div class="panel-body" id="game-area" >
+					<div class="row box">
 				<div class="col-md-3">
 				</div>
 				<div class="col-md-6">
 					<div id="word">
-						
 					</div>
+</div>
+					
+
 				</div>
 
 				<div class="col-md-3">
+					
 				</div>
 			</div>
 				</div>
-				<div class="panel-footer">
-					Panel footer
-				</div>
+				
 			</div>
 		</div>
 	</div>
 </div>
-	
+	<p class = "footer">     &copy A Long , Long Time Ago </p>
 </body>
 </html>

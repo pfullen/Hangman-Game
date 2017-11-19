@@ -1,0 +1,96 @@
+
+(function (window, undefined) {
+	"use strict";
+	if (!mplx) {
+	  var mplx = {};
+	}
+	mplx.outVars = {
+		"mpcke": "<mpcke/>",
+		"mpi": "<mpi/>",
+		"mpcrgif": "<mpcrgif/>",
+		"mpcrw": "<mpcrw/>",
+		"mpcrh": "<mpcrh/>",
+		"mpadmarker": "<mpadmarker/>",
+		"mpadmarkerurl": "<mpadmarkerurl/>",
+		"mpcrflash": "<mpcrflash/>",
+		"mpcrid": "<mpcrid/>",
+		"geozip": "<geozip/>",
+		"geocity": "<geocity/>",
+		"geoareacode": "<geoareacode/>",
+		"geocountry": "<geocountry/>",
+		"geostate": "<geostate/>",
+		"geotz": "<geotz/>",
+		"geocontinent": "<geocontinent/>",
+		"geodma": "<geodma/>",
+		"ptoffsetyear": "<ptoffsetyear/>",
+		"ptoffsetmonth": "<ptoffsetmonth/>",
+		"ptoffsetday": "<ptoffsetday/>",
+		"ptoffsethour": "<ptoffsethour/>",
+		"ptoffsetmin": "<ptoffsetmin/>",
+		"refdomain": "<refdomain/>",
+		"placementid": "<placementid/>",
+		"mpaltexp": "<mpaltexp/>",
+		"mpaltflash": "<mpaltflash/>",
+		"mpanimate": "<mpanimate/>",
+		"mpauto": "<mpauto/>",
+		"mpcrflash2": "<mpcrflash2/>",
+		"mpcrflv": "<mpcrflv/>",
+		"mpcrgif2": "<mpcrgif2/>",
+		"mpcrn": "<mpcrn/>",
+		"mpcrn_aol": "<mpcrn_aol/>",
+		"mpcrpv": "<mpcrpv/>",
+		"mpcrwin": "<mpcrwin/>",
+		"mpcrwinex": "<mpcrwinex/>",
+		"mpcrx": "<mpcrx/>",
+		"mpcrxh": "<mpcrxh/>",
+		"mpcrxw": "<mpcrxw/>",
+		"mpcry": "<mpcry/>",
+		"mpcrz": "<mpcrz/>",
+		"mpexdelay": "<mpexdelay/>",
+		"mpexpandspeed": "<mpexpandspeed/>",
+		"mphd": "<mphd/>",
+		"mpmouseout": "<mpmouseout/>",
+		"mpocd": "<mpocd/>",
+		"mpoverflow": "<mpoverflow/>",
+		"mpovrly": "<mpovrly/>",
+		"mppshdwn": "<mppshdwn/>",
+		"mpretdelay": "<mpretdelay/>",
+		"mprmtype": "<mprmtype/>",
+		"mpretractspeed": "<mpretractspeed/>",
+		"mpsingle": "<mpsingle/>",
+		"mpsv": "<mpsv/>",
+		"mpswfoffset": "<mpswfoffset/>",
+		"mpvd": "<mpvd/>",
+		"mpssl": "1",
+		"mpck": "adfarm.mediaplex.com/ad/ck/12309-240560-26110-2?mpt=1511037040343447&mpcr=101939725&mpcrset=root",
+		"mpvc": "https://googleads.g.doubleclick.net/dbm/clk?sa=L&ai=C8KTPcJgQWpf7FMuqmATj-5GgDp-7xPFNy6u1v40Gybmxm8wIEAEgj8DuImDJxsSH4KO0EKABk-XbxwPIAQmoAwGqBL0BT9C1TlyxLkagI14kN2ybrOVsRmU4sqghrU13u9MfaJ5kf_K1ESZIGKQdacdTTVz5xpgivh3e0Vcp8hbig7oVSPZ_2_IxNojKsLHL-XOi0RLTxE4iZ86iQYEwkpgUUsMZuhFjQQdMSO3NfK6OijpBOImqGcOsW6qCwuSQFPQBs7CtEO2uT8lVAF166as32CzIxtYsJgEJjwzBaFT_pt1cv9chJHpvnwLiin_7-7gM5OzqHRUV5RmiYhxOuM0I4AQDkAYBoAZNgAfVmqQ4qAemvhvYBwDSCAcIgGEQARgBgAoDyBOi-6QC0BMA2BMD&num=1&cid=CAASEuRo8NKrOiyiYgFcxtL2t93PyQ&sig=AOD64_0bQwql1fEwTacmXH8zmhdJWwIasg&client=ca-pub-1993393738408076&dbm_c=AKAmf-CQG_0Mh-b1jOX5Cdz7XsMebp4vLTAG1eiGkDwq8w4Npbk6i1Q-GPUtQ8RwbSzt-se5ULCg&dbm_d=AKAmf-Cp0lsKHN6I8rRgwk5DIcgEJSlicmxyW3FHYzm8P84c8Wqv6ZGwwW1TskDQNO5w_2Kkql6FFoHuJNUq6jGDBilzKUwi-aUCI-rNtpFd57kA2lBLonMzidVWbvgLOivRUEm-1DFAACg6GRL_eKyMgJdTzNSR9WCZpFxnp8ODDaXQ2puArngq4bSzxxZY3FU2ZGW1ne5w&adurl="
+	};
+
+	mplx.mpqs = "mpt=1511037040343447";
+	mplx.mpqs = (mplx.mpqs !== "") ? mplx.mpqs : "";
+	for (var props in mplx.outVars) {
+		if (mplx.outVars[props].indexOf("/>") < 0 ) {
+			mplx.mpqs += "&" + props + "=" + encodeURIComponent(mplx.outVars[props]);
+		}
+	}
+
+	mplx.iFrameSrc = (mplx.outVars.mpssl == 1 ? "https://img.mediaplex.com/content/0" : "http://img.mediaplex.com/content/0") + "/12309/240560/736841_228721_us_cs_sb_sb_fy18q4wk1_oa_ena-static-mf_728x90_dell_index.html" + "?" + mplx.mpqs;
+	mplx.mojoframe = '<iframe border="0" src="' + mplx.iFrameSrc + '" width="728" height="90" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no" bordercolor="#000000"></iframe>';
+	document.write(mplx.mojoframe);
+
+	mplx.randJSI = Math.floor(Math.random()*100000+1);
+	document.write('<div id="mojoJSI_' + mplx.randJSI +'" style="height:0px; width:0px;"></div>');
+	mplx.mpjs = String("https://cdn.doubleverify.com/dvtp_src.js?ctx=569086&cmp=240560&sid=26110&plc=12309240560261102&num=&adid=&advid=236&adsrv=8&region=30&btreg=12309240560261102&btadsrv=mediaplex&crt=101939725&dvp_plcd=12309-240560-26110-2&crtname=&chnl=&unit=&pid=&uid=&tagtype=&dvtagver=6.1.src https://secure.insightexpressai.com/adServer/adServerESI.aspx?bannerID=1307937&siteID=26110&placementid=12309-240560-26110-2&creativeID=101939725&rnd=[CACHEBUSTER]");
+	if (mplx.mpjs && typeof mplx.mpjs === "string" && mplx.mpjs.length > 0 && mplx.mpjs!="<mp"+"jsp/>") {
+		mplx.mpscr = {};
+		mplx.mojoTiny = document.getElementById("mojoJSI_" + mplx.randJSI);
+		mplx.mpjs = mplx.mpjs.split( " " );
+		for( var i = 0; i < mplx.mpjs.length; i++ ) {
+			mplx.mpscr = document.createElement("script");
+			mplx.mpscr.type = "text/javascript";
+			mplx.mpscr.async = true;
+			mplx.mpscr.src = mplx.mpjs[i];
+			mplx.mojoTiny.appendChild(mplx.mpscr);
+		}
+	}
+})(window);

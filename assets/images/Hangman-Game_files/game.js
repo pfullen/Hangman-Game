@@ -11,8 +11,8 @@ $('#start').on("click", function() {
 });
 
 
-$('#guesses-remaining').append(guessesRemaining);
-$('#correct-guesses').append(correctGuesses);
+$('#guessesRemaining').append('Guesses Remaining: ' + guessesRemaining);
+$('#correctGuesses').append('Correct Guesses: ' + correctGuesses);
 
 var words = ["jedi", "lukeskywalker", "lightsaber", "chewbacca", "darthvader", "stormtrooper", "bobafett", "darthmaul"];
 
