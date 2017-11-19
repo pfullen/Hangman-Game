@@ -13,57 +13,77 @@
 <body>
 
 	
-	<div class="container-fluid">
-	<div class="row">
+	<div class="container-fluid ">
+	<div class="row >
 		<div class="col-md-12">
-			<div class="row">
+			<div class="rows">
 				<div class = "container-fluid top">
-				<h1>  Welcome to Hangman  </h1>
-				<button type="button" class="btn btn-primary"> click to begin  </button>
-				<p>  For instuctions type *   </p>
-
 				
+
+				<h1>  In A Galaxy Far Far Away......  </h1>
+				
+				<!--  <p>  For instuctions type *   </p>  -->
+
+				<br>
+				<br>
 				<div class="col-md-12">
 					<img id="header_img" `alt="Bootstrap Image Preview" src="assets/images/Star_Wars.png" />
 				</div>
 				
+				
+
+
+				
+
 			</div> 
-			<button type="button" class="btn btn-default">
-				Default
-			</button> 
-			<button type="button" class="btn btn-default">
-				Default
-			</button> 
-			<button type="button" class="btn btn-default">
-				Default
-			</button>
+			
 			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title">
-						Panel title
-					</h3>
+				
+					<div id="button-area">
+					<button type="button" class="btn btn-primary" id="start"> Click to play  </button>
+					</div>
+					<div id="gameStatus">
 				</div>
-				<div class="panel-body" >
-					<div class="row">
+				<div>
+					<h3 class="panel-title" id="instructions" >
+						Use the Force, Luke!!!  
+						<br>
+						<br>
+						Guess the correct letter and solve the hidden word.  
+						<br>
+						 Just press a letter on your keyboard.
+					</h3>
+
+
+				<div id="guessesRemaining">
+				</div>
+				
+				<div id="correctGuesses">
+				</div>
+
+				</div>
+				<div class="panel-body" id="game-area" >
+					<div class="row box">
 				<div class="col-md-3">
 				</div>
 				<div class="col-md-6">
 					<div id="word">
-						
 					</div>
+</div>
+					
+
 				</div>
 
 				<div class="col-md-3">
+					
 				</div>
 			</div>
 				</div>
-				<div class="panel-footer">
-					Panel footer
-				</div>
+				
 			</div>
 		</div>
 	</div>
 </div>
-	
+	<p class = "footer">     &copy A Long , Long Time Ago </p>
 </body>
 </html>
