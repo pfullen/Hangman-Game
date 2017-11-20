@@ -1,16 +1,15 @@
 
 
 
+
 body {
 
-	background: url('../images/star-wars-cover.jpg'); 
+/*	background: url('../images/star-wars-cover.jpg'); */
 	background-size: contain;
 	background-repeat: no-repeat;
-    background-color: black;
+	background-color: black;	
 	font-family: "Century Gothic", Arial, Times;
 	width:100%;
-	min-height: 100%;
-	padding-bottom: 0;
 }
 
 
@@ -27,7 +26,6 @@ body {
 	background-repeat: no-repeat;
 	border-radius: 5px;
 	margin-top: -75px;
-
 	
 }
 
@@ -36,12 +34,7 @@ body {
 	text-align: center;
 	margin: 0 auto;
 	padding-right: 0;
-	padding-left: 0;
-	margin-bottom: 0;	
-}
-
-.top h1 {
-	margin-bottom: 0;
+	padding-left: 0;	
 }
 
 #.panel-body div   {
@@ -58,13 +51,10 @@ width: 30% ;
 
 #word {
 	margin: 0 auto;
-	width: 50%;
+	padding-left: 25px;
 	display: inline;
-	padding-left: 365px;
-	
-	
-	
-	
+	margin-top: -200px;
+
 }
 
 #start {
@@ -78,13 +68,12 @@ width: 30% ;
 }
 
 
- #header-img {
+ #header_img {
 	background-image: cover;
 	height:160px;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	display: none;	
-	margin: 0 auto;
 	
  }
 
@@ -102,9 +91,6 @@ width: 30% ;
   #game-area {
   	visibility: hidden;
   	height: 20px;
-  	width: auto;
-  	margin: 0 auto;
-	
 
   }
 
@@ -125,15 +111,15 @@ h3 {
 	background-color: black;
 	color: white;
 	margin-top: 40px;
-	height: 170px;	
+	height: auto;	;
 	margin-bottom: 0;
 	width: 100%;
-	top: 400px;
-	
 
 }
 
+.container-fluid {
 
+}
 
 
 .box {
@@ -142,16 +128,6 @@ h3 {
 }
 
 .footer {
-	
-	padding-bottom: 0;
-	margin-bottom: -100px;
-	bottom: 0;
-	text-align: center;
-	color: white;
-
-}
-
-.footer p {
 		
 	color: white;
 	padding: 0;
@@ -159,9 +135,7 @@ h3 {
 	font-size: 10px;
 	text-align: center;
 	background-color: black;
-	height: 20px;
-	padding-top: 0;
-
+	padding-top: 10px;
 }
 
 #gameStatus {
@@ -214,8 +188,3 @@ iframe {
 	background-color: black;
 	padding: 0;
 }
-
-#new-game {
-	display: none;
-}
-

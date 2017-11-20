@@ -9,12 +9,11 @@ var correctGuesses = 0;
 $('#continue').on("click", function()  {
 	$('#continue').hide();
 	$('#intro').hide();
-	$('#header-img').show();
-	$('.panel-default').css("height", "320px")
-	$('#header-area').css('width', '30%');
-	$('#header-area').css('margin', '0 auto');
+	$('#img-header').show();
 	$('#start').show();
-	$('#instructions').show();			
+	$('#instructions').show();
+	var imgage = "url('../images/star-wars-cover.jpg')";
+	$('body').css("background-image", image);
 });
 
 
@@ -24,12 +23,11 @@ $('#continue').on("click", function()  {
 $('#start').on("click", function() {
 	$('#game-area').css('visibility', 'visible');
 	$('#instructions').css('visibility', 'hidden');
-	$('#game-counters').show();
 });
 
 
-$('#guesses-remaining').append('Guesses Remaining: ' + guessesRemaining);
-$('#correct-guesses').append('Correct Guesses: ' + correctGuesses);
+$('#guesses-remaining').append(guessesRemaining);
+$('#correct-guesses').append(correctGuesses);
 
 var words = ["jedi", "lukeskywalker", "lightsaber", "chewbacca", "darthvader", "stormtrooper", "bobafett", "darthmaul"];
 
