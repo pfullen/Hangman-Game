@@ -33,10 +33,6 @@ $('#start').on("click", function() {
 	
 });
 
-$('#play-again').on("click", function()  {
-		location.reload();
-	});
-
 
 $('#guesses-remaining').append('Guesses Remaining: ' + guessesRemaining);
 $('#correct-guesses').append('Correct Guesses: ' + correctGuesses);
@@ -141,11 +137,6 @@ for (i=0; i< word.length ; i++) {
 		if (correctGuesses == word.length) {
 			$('#game-header').html('The Force is strong with you young Jedi.  You have won this time');
 			$('#game-counters').hide();
-			setTimeout(10000);
-			$('#game-header').hide();
-			$('#header-area').hide();
-			$('#win').show();
-			$('#play-again').show();
 		// add death star explosion here.
 		// add replay button  --> create a start function to init all variables 
 		} 
