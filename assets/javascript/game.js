@@ -81,6 +81,15 @@ $('html').keyup(function (event) {
    //self.location="assets/sounds/wookie.mp3";
    console.log("you pressed" + event.key);
 
+   var blaster = document.createElement("audio");    //  move to function to allow for more sounds
+   blaster.setAttribute("src", "assets/sounds/blaster-firing.mp3");
+   blaster.play();
+   setTimeout(2000);
+   var blaster = document.createElement("audio");    //  move to function to allow for more sounds
+   blaster.setAttribute("src", "assets/sounds/blaster-firing.mp3");
+   blaster.play();
+   setTimeout(2000);
+
 	var userChoice = event.key;
    // var index = word.indexOf(userChoice);
 	
@@ -120,6 +129,9 @@ for (i=0; i< word.length ; i++) {
 		$('#letter-' +i).parent().css("background", "none");
 		$('#game-header').css("color", "green");
 		$('#game-header').html(" Correct!! The Force is strong with you young Jedi");
+		var forceStrong = document.createElement("audio");    //  move to function to allow for more sounds
+     	forceStrong.setAttribute("src", "assets/sounds/forcestrong.mp3");
+   		forceStrong.play();
 		
 		if (correctGuesses == word.length) {
 			$('#game-header').html('The Force is strong with you young Jedi.  You have won this time');

@@ -4,7 +4,7 @@
 body {
 
 	background: url('../images/star-wars-cover.jpg'); 
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
     background-color: black;
 	font-family: "Century Gothic", Arial, Times;
