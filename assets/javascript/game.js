@@ -10,7 +10,7 @@ $('#continue').on("click", function()  {
 	$('#continue').hide();
 	$('#intro').hide();
 	$('#header-img').show();
-	$('.panel-default').css("height", "320px")
+	$('.panel-default').css("height", "230px")
 	$('#header-area').css('width', '30%');
 	$('#header-area').css('margin', '0 auto');
 	$('#start').show();
@@ -25,6 +25,11 @@ $('#start').on("click", function() {
 	$('#game-area').css('visibility', 'visible');
 	$('#instructions').css('visibility', 'hidden');
 	$('#game-counters').show();
+	$('#game-header').show();
+	$('#start').hide();
+	var imperial_march = document.createElement("audio");    //  move to function to allow for more sounds
+     imperial_march.setAttribute("src", "assets/sounds/imperial_march.mp3");
+     imperial_march.play();
 });
 
 
@@ -71,21 +76,33 @@ $.each(word, function(index, value) {
 var indexNums = [] ;
 var correctGuesses = 0; 
 
-document.onkeyup = function(event) {
+//document.onkeyup = function(event) {
+$('html').keyup(function (event) {
+   //self.location="assets/sounds/wookie.mp3";
+   console.log("you pressed" + event.key);
 
- var userChoice = event.key;
-
-  //  var index = word.indexOf(userChoice);
-	console.log(event.key);
+	var userChoice = event.key;
+   // var index = word.indexOf(userChoice);
+	
 
  if (word.indexOf(userChoice) === -1 ) {
 
  	console.log('Incorrect Guess');
  	guessesRemaining--;
-	$('#guessesRemaining').html('Guesses Remaining: ' + guessesRemaining);
+	$('#guesses-remaining').html('Guesses Remaining: ' + guessesRemaining);
+	$('#game-header').css("color", "red");
+	$('#game-header').html(" Wrong Choice!! ---   Do or do not.  There is no try.");
+	
+
+	 var wookie = document.createElement("audio");    //  move to function to allow for more sounds
+     wookie.setAttribute("src", "assets/sounds/wookie.mp3");
+     wookie.play();
+
 
 	if (guessesRemaining === 0 ) {
-		$('#gameStatus').html('Do or do not. There is no try.   You Lost!!!!');
+		$('#game-header').html('Do or do not. There is no try.   You Lost!!!!');
+		$('#game-counters').hide();
+		//  add carbon freeze video here
 	}
 
  };
@@ -97,16 +114,20 @@ for (i=0; i< word.length ; i++) {
 		indexNums.push(i);
 		correctGuesses++;
 		console.log("correctGuesses:" + correctGuesses);
-		$('#correctGuesses').html('Correct Guesses' + correctGuesses);
+		$('#correct-guesses').html('Correct Guesses: ' + correctGuesses);
 		
 		$('#letter-'+ i).css("visibility", "visible");
 		$('#letter-' +i).parent().css("background", "none");
-
-		if (correctGuesses == word.length) {
-			$('#gameStatus').html('The Force is strong with you young Jedi.  You have won this time');
-		} 
-
+		$('#game-header').css("color", "green");
+		$('#game-header').html(" Correct!! The Force is strong with you young Jedi");
 		
+		if (correctGuesses == word.length) {
+			$('#game-header').html('The Force is strong with you young Jedi.  You have won this time');
+			$('#game-counters').hide();
+		// add death star explosion here.
+		// add replay button  --> create a start function to init all variables 
+		} 
+	
 	}; 
 };
 
@@ -119,7 +140,7 @@ $.each(indexNums, function(index, element){
 
 
 	
-  };    // end of document key up function 
+  });    // end of document key up function 
 	
 
 });  // end of file  document ready
